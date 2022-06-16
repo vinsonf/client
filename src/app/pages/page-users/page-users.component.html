@@ -1,0 +1,23 @@
+<p>page-users works!</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Username</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users$ | async">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.username}}</td>
+      <td><a routerLink="details/{{user.id}}">details</a></td>
+    </tr>
+  </tbody>
+</table>
+<router-outlet></router-outlet>
