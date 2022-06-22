@@ -1,3 +1,13 @@
 <p>details-user works!</p>
 {{id$ | async}}
+
 {{user$ | async | json}}
+
+<ng-container *ngIf="user$ | async as user">
+  <h2>{{user.name}}</h2>
+  <ul>
+    <li>{{user.id}}</li>
+    <li>{{user.username}}</li>
+    <li>{{user.email}}</li>
+  </ul>
+</ng-container>

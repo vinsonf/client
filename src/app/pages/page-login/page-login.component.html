@@ -1,0 +1,7 @@
+<p>page-login works!</p>
+<li>{{loggedInUser$ | async | json}}</li>
+<form [formGroup]="form">
+  <input placeholder="username" formControlName="username" type="text">
+  <input placeholder="password" formControlName="password" type="text">
+  <button (click)="login()">Login</button>
+</form>
