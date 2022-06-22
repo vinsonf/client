@@ -15,8 +15,8 @@ export class PageLoginComponent implements OnInit {
     private fb: FormBuilder,
   ) {
     this.form = this.fb.group({
-      username: '',
-      password: '',
+      username: 'Bret',
+      password: 'Leanne Graham',
     });
     this.loggedInUser$ = this.usersService.loggedInUser$;
    }

@@ -8,12 +8,11 @@ import { ApiService } from './api.service';
   providedIn: 'root'
 })
 export class UsersService {
-  users$;
+  users$ = this.api.get<IUser[]>('users');;
   loggedInUser$: Observable<undefined | IUser> = of(undefined);
   constructor(
     private api: ApiService,
   ) {
-    this.users$ = this.api.get<IUser[]>('users');
    }
    getUser(id$: Observable<string|null>): Observable<IUser | undefined> {
     return this.users$.pipe(
